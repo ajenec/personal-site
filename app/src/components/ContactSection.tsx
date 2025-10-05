@@ -1,7 +1,4 @@
-type ContactProps = {
-  label: string;
-  name: string;
-};
+
 
 const ContactMe = () => {
   return (
