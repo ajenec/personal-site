@@ -13,14 +13,21 @@ function HeroSection() {
           I'm Ajene Christian
         </h1>
         <p className="text-xl text-white mt-2 drop-shadow-md">
-          Full Stack Developer | Creative
+          Full Stack Developer building AI-powered web applications and scalable
+          systems
+        </p>
+        <p>
+          <p className="text-sm text-white mt-2">
+            Using React, Python, Docker, and agent-based workflows with
+            LangGraph
+          </p>
         </p>
         <p className="text-sm italic text-white mt-2 drop-shadow-sm">
           It isn't where you came from, it's where you're going that counts. -
           Ella Fitzgerald
         </p>
         <button className="mt-6 px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition">
-          View My Work
+          View Projects
         </button>
       </div>
     </div>

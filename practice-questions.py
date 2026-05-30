@@ -77,4 +77,32 @@ def findMax(prices):
     return max(profit)
 
 prices = [7,1,5,3,6,4] # output: 0
-print(findMax(prices))
+# print(findMax(prices))
+
+'''
+53. Maximum Subarray
+
+Task: Im given an array of integers. I want to find the subarray (containing at least one number) 
+which has the largest sum and return its sum.
+
+
+
+Input: nums = [-2,1,-3,4,-1,2,1,-5,4]
+Output: 6
+Explanation: [4,-1,2,1] has the largest sum = 6.
+
+
+WHY I MESSED UP? --------------------------->
+'''
+def maxSubArray(nums):
+    subArray = []
+
+    for i in range(len(nums)):
+        for j in range(i +1 , len(nums) + 1):
+            sub = nums[i:j]
+            subArray.append(sum(sub))
+            print("sub->",sub)
+    return max(subArray)
+
+nums = [1,2,3]
+print(maxSubArray(nums)) 
