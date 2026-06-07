@@ -1,19 +1,22 @@
 import "./App.css";
+import "./index.css";
 import HeroSection from "./components/HeroSection";
 import ProjectsSection from "./components/ProjectsSection";
+import AnimatedGlow from "./components/AnimatedGlow";
 import AboutMe from "./components/AboutSection";
 import ContactMe from "./components/ContactSection";
+import Footer from "./components/Footer";
 
 function App() {
   return (
-    <div className="relative overflow-hidden min-h-screen">
-      <div className="absolute inset-0 -z-10 bg-gradient-to-br from-[#072929] via-[#2F702F] to-[#E05219] animate-gradientMove opacity-90"></div>
-      <div className="absolute inset-0 -z-20 bg-neutral-900"></div>
+    <main className="scheherazade bg-[#070b18] min-h-screen relative text-white">
+      <AnimatedGlow />
       <HeroSection />
       <ProjectsSection />
       <AboutMe />
       <ContactMe />
-    </div>
+      <Footer />
+    </main>
   );
 }
 

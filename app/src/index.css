@@ -1,18 +1,47 @@
+@import url("https://fonts.googleapis.com/css2?family=Borel&family=Scheherazade+New:wght@400;500;600;700&display=swap");
+
 @import "tailwindcss";
 
-@keyframes gradientMove {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
+.borel {
+  font-family: "Borel", cursive;
 }
 
-.animate-gradientMove {
-  background-size: 200% 200%;
-  animation: gradientMove 12s ease infinite;
+.scheherazade {
+  font-family: "Scheherazade New", serif;
+}
+
+.glow-orb {
+  position: absolute;
+  width: 600px;
+  height: 600px;
+
+  border-radius: 9999px;
+
+  background: rgba(220, 38, 38, 0.28);
+
+  filter: blur(140px);
+
+  animation: drift 25s ease-in-out infinite;
+}
+
+@keyframes drift {
+  0% {
+    transform: translate(-15vw, 10vh) scale(1);
+  }
+
+  25% {
+    transform: translate(30vw, 0vh) scale(1.15);
+  }
+
+  50% {
+    transform: translate(55vw, 35vh) scale(0.95);
+  }
+
+  75% {
+    transform: translate(20vw, 55vh) scale(1.1);
+  }
+
+  100% {
+    transform: translate(-15vw, 10vh) scale(1);
+  }
 }
