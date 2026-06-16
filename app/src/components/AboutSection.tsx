@@ -12,20 +12,21 @@ const AboutMe = () => {
 
   return (
     <section id="about" className="relative overflow-hidden py-24">
+      {/* <div className="absolute left-1/2 top-8 h-[420px] w-[420px] -translate-x-1/2 rounded-full bg-orange-500/10 blur-3xl" /> */}
       <div className="relative z-10 mx-auto max-w-7xl px-6">
         <div className="max-w-3xl">
-          <p className="mb-4 text-sm font-semibold uppercase tracking-[0.35em] text-red-300">
+          <p className="mb-4 text-sm font-semibold uppercase tracking-[0.35em] text-orange-300">
             Get to know me
           </p>
 
           <h2 className="text-4xl font-black leading-tight md:text-6xl">
-            About <span className="text-red-400">Me</span>
+            About <span className="text-orange-400">Me</span>
           </h2>
         </div>
 
         <div className="mt-14 grid gap-8 lg:grid-cols-[1.2fr_0.8fr]">
-          <div className="rounded-2xl border border-white/10 bg-white/[0.03] p-8">
-            <h3 className="text-2xl font-black text-red-300">Who I Am</h3>
+          <div className="rounded-[2rem] border border-white/10 bg-white/5 p-10 backdrop-blur-xl">
+            <h3 className="text-2xl font-black text-orange-300">Who I Am</h3>
 
             <p className="mt-4 text-slate-300">
               I’m Ajene Christian, a Full Stack Developer from New York City
@@ -33,7 +34,7 @@ const AboutMe = () => {
               problem-solving with creativity.
             </p>
 
-            <h3 className="mt-8 text-2xl font-black text-red-300">
+            <h3 className="mt-10 text-2xl font-black text-orange-300">
               How I Got Here
             </h3>
 
@@ -45,7 +46,7 @@ const AboutMe = () => {
               collaboration, and communication.
             </p>
 
-            <h3 className="mt-8 text-2xl font-black text-red-300">
+            <h3 className="mt-10 text-2xl font-black text-orange-300">
               What I’m Building
             </h3>
 
@@ -54,17 +55,33 @@ const AboutMe = () => {
               lives, tell stories through technology, and turn ideas into
               polished digital experiences.
             </p>
+
+            <div className="mt-10 flex flex-wrap gap-4">
+              <a
+                href="#projects"
+                className="rounded-xl border border-white/20 px-8 py-4 text-sm font-semibold uppercase tracking-[0.18em] text-orange-300 transition-all duration-300 hover:scale-105 hover:border-orange-400/70 hover:shadow-[0_0_24px_4px_rgba(251,146,60,0.35)]"
+              >
+                View Projects
+              </a>
+
+              <a
+                href="#contact"
+                className="rounded-xl border border-white/20 px-8 py-4 text-sm font-semibold uppercase tracking-[0.18em] text-orange-300 transition-all duration-300 hover:scale-105 hover:border-orange-400/70 hover:shadow-[0_0_24px_4px_rgba(251,146,60,0.35)]"
+              >
+                Let's Connect
+              </a>
+            </div>
           </div>
 
           <div className="space-y-6">
-            <div className="rounded-2xl border border-white/10 bg-white/[0.03] p-8">
+            <div className="rounded-[2rem] border border-white/10 bg-white/5 p-10 backdrop-blur-xl">
               <h3 className="text-2xl font-black">Skills</h3>
 
               <div className="mt-6 flex flex-wrap gap-3">
                 {skills.map((skill) => (
                   <span
                     key={skill}
-                    className="rounded-full border border-red-400/30 bg-red-400/10 px-3 py-1 text-sm text-red-200"
+                    className="rounded-full border border-orange-400/30 bg-orange-400/10 px-3 py-1 text-sm text-orange-200"
                   >
                     {skill}
                   </span>
@@ -72,7 +89,7 @@ const AboutMe = () => {
               </div>
             </div>
 
-            <div className="rounded-2xl border border-white/10 bg-white/[0.03] p-8">
+            <div className="rounded-[2rem] border border-white/10 bg-white/5 p-10 backdrop-blur-xl">
               <h3 className="text-2xl font-black">Education & Training</h3>
 
               <ul className="mt-6 space-y-4 text-slate-300">

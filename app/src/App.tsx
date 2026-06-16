@@ -11,11 +11,13 @@ function App() {
   return (
     <main className="scheherazade bg-[#070b18] min-h-screen relative text-white">
       <AnimatedGlow />
-      <HeroSection />
-      <ProjectsSection />
-      <AboutMe />
-      <ContactMe />
-      <Footer />
+      <div className="relative z-10">
+        <HeroSection />
+        <ProjectsSection />
+        <AboutMe />
+        <ContactMe />
+        <Footer />
+      </div>
     </main>
   );
 }
