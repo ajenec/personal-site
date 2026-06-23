@@ -101,7 +101,7 @@ type Project = {
 function ProjectsSection() {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
 
-  const projects = [
+  const projects: Project[] = [
     {
       title: "BuddyOS",
       type: "AI-Powered Productivity Platform",
