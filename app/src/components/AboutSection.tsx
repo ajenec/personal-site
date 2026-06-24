@@ -1,3 +1,6 @@
+import { ArrowUp } from "lucide-react";
+import { useEffect, useState } from "react";
+
 const AboutMe = () => {
   const skills = [
     "JavaScript / TypeScript",
@@ -9,6 +12,20 @@ const AboutMe = () => {
     "Git / GitHub",
     "Node.js",
   ];
+
+  const [showTopButton, setShowTopButton] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setShowTopButton(window.scrollY > 500);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   return (
     <section id="about" className="relative overflow-hidden py-24">
@@ -23,6 +40,35 @@ const AboutMe = () => {
             About <span className="text-orange-400">Me</span>
           </h2>
         </div>
+
+        {showTopButton && (
+          <a
+            href="#home"
+            className="
+    fixed
+    bottom-8
+    right-8
+    z-50
+    flex
+    h-12
+    w-12
+    items-center
+    justify-center
+    rounded-full
+    border
+    border-white/10
+    bg-white/10
+    backdrop-blur-md
+    transition-all
+    duration-300
+    hover:-translate-y-1
+    hover:border-orange-400/50
+    hover:shadow-[0_0_20px_rgba(251,146,60,0.3)]
+  "
+          >
+            <ArrowUp size={25} />
+          </a>
+        )}
 
         <div className="mt-14 grid gap-8 lg:grid-cols-[1.2fr_0.8fr]">
           <div className="rounded-[2rem] border border-white/10 bg-white/5 p-10 backdrop-blur-xl">
@@ -73,7 +119,7 @@ const AboutMe = () => {
             </div>
           </div>
 
-          <div className="space-y-6">
+          <div className="grid gap-6">
             <div className="rounded-[2rem] border border-white/10 bg-white/5 p-10 backdrop-blur-xl">
               <h3 className="text-2xl font-black">Skills</h3>
 
@@ -106,76 +152,3 @@ const AboutMe = () => {
 };
 
 export default AboutMe;
-
-// const AboutMe = () => {
-//   const skills = [
-//     "JavaScript / TypeScript",
-//     "React",
-//     "Tailwind CSS",
-//     "Python",
-//     "Flask",
-//     "PostgreSQL",
-//     "Git / GitHub",
-//     "Node.js",
-//   ];
-
-//   return (
-//     <section id="about">
-//       <div>
-//         <p>Get to know me</p>
-
-//         <h2>
-//           About <span>Me</span>
-//         </h2>
-
-//         <div>
-//           <div>
-//             <p>
-//               I’m Ajene Christian, a Full Stack Developer from New York City
-//               with a passion for building web applications that blend technical
-//               problem-solving with creativity. My journey into tech started in
-//               an unexpected way — through an aptitude test for the Navy that
-//               revealed my potential for high-clearance tech roles.
-//             </p>
-
-//             <p>
-//               That spark led me to The Marcy Lab School, where I honed my skills
-//               in React, Flask, and PostgreSQL while also learning the importance
-//               of collaboration and communication in building meaningful
-//               projects.
-//             </p>
-
-//             <p>
-//               Today, I’m focused on creating applications that improve people’s
-//               lives and tell stories through technology.
-//             </p>
-//           </div>
-
-//           <div>
-//             <div>
-//               <h3>Skills</h3>
-
-//               <div>
-//                 {skills.map((skill) => (
-//                   <span key={skill}>{skill}</span>
-//                 ))}
-//               </div>
-//             </div>
-
-//             <div>
-//               <h3>Education & Training</h3>
-
-//               <ul>
-//                 <li>Software Engineering Fellowship – The Marcy Lab School</li>
-//                 <li>Medgar Evers College – Bachelor of Science</li>
-//                 <li>LaGuardia Community College – Veterinary Technology</li>
-//               </ul>
-//             </div>
-//           </div>
-//         </div>
-//       </div>
-//     </section>
-//   );
-// };
-
-// export default AboutMe;
